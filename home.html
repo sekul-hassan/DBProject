@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js">
     <title>Home</title>
 </head>
 
@@ -25,7 +25,10 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Route-map</a>
+                    <a class="nav-link" id="routeMapBtn" href="#">Route-map</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profileBtn" href="#">Profile</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Logout</a>
@@ -45,16 +48,125 @@
     <footer>
         <p> All rights reserved <span> © 2023 SEKULL HASSAN</span>.</p>
     </footer>
-
-    <div class="routeMap">
-        <h3 class="text-center pt-3">Please Select One Bus</h3>
-
-
-
+    <div class="container">
+        <div class="routeMap" id="routeMap">
+            <h3 class="text-center pt-3">Please Select One Bus</h3>
+            <form action="">
+                <div class="row">
+                    <div class="col pl-5">
+                        <label for="">Anonna</label>
+                        <select name="anonna1" id="anonna1">
+                            <option value=""></option>
+                            <option value="srj">SRJ</option>
+                            <option value="bottola">Bottola</option>
+                            <option value="bank">Bank</option>
+                            <option value="transport">Transport</option>
+                        </select>
+                    </div>
+                    <div class="col pl-5">
+                        <label for="">Anonna</label>
+                        <select name="anonna2" id="anonna2">
+                            <option value=""></option>
+                            <option value="srj">SRJ</option>
+                            <option value="bottola">Bottola</option>
+                            <option value="bank">Bank</option>
+                            <option value="transport">Transport</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col pl-5">
+                        <label for="">Rojina </label>
+                        <select name="rojina" id="rojina1">
+                            <option value=""></option>
+                            <option value="bottola">Bottole</option>
+                            <option value="newresister">New Resister</option>
+                            <option value="janaraimam">Janaraimam</option>
+                            <option value="dairy">Dairy</option>
+                        </select>
+                    </div>
+                    <div class="col pl-5">
+                        <label for="">Rojina </label>
+                        <select name="rojina" id="rojina2">
+                            <option value=""></option>
+                            <option value="bottola">Bottole</option>
+                            <option value="newresister">New Resister</option>
+                            <option value="janaraimam">Janaraimam</option>
+                            <option value="dairy">Dairy</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col pl-5">
+                        <label for="">Boishaki</label>
+                        <select name="boishaki1" id="boishaki1">
+                            <option value=""></option>
+                            <option value="mh">MH</option>
+                            <option value="shohidminar">Shohid Minal</option>
+                            <option value="chourongi">Chourongi</option>
+                            <option value="janaraimam">Janaraimam</option>
+                        </select>
+                    </div>
+                    <div class="col pl-5">
+                        <label for="">Boishaki</label>
+                        <select name="boishaki2" id="boishaki2">
+                            <option value=""></option>
+                            <option value="mh">MH</option>
+                            <option value="shohidminar">Shohid Minal</option>
+                            <option value="chourongi">Chourongi</option>
+                            <option value="janaraimam">Janaraimam</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col pl-5">
+                        <label for="">Enter your card number</label>
+                        <input type="text" name="cardnumber" placeholder="Enter your card number" required><br>
+                        <button type="submit" class="btn btn-primary mt-2" id="saveBus">Submit</button>
+                        <a class="btn btn-danger buscancel" id="mapCancel">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 
+    <div class="profile" id="profile">
+        <h5>Your name is : Koddus</h5>
+        <h5>Your email is : Koddus@gmail.com</h5>
+        <h5>Your phone is : 017878454</h5>
+        <h5>Your gender is : TNG</h5>
+        <h5>Your BG is : B-</h5>
+        <button class="btn btn-primary buscancel" id="profileUpdate">Update</button>
+        <button class="btn btn-danger buscancel" id="profileCancel">Cancel</button>
+    </div>
 
+    <div class="profileForm" id="profileForm">
+        <h4>update your information</h4>
+        <form action="">
+            <label for="">Your Name is :</label> <input type="text" placeholder="Akkass Uddin"><br>
 
+            <label for="">Your Email is :</label>
+            <input type="email" placeholder="Akkass@gamil.com"><br>
+
+            <label for="">Your Phone is :</label>
+            <input type="tel" placeholder="0188787345"><br>
+
+            <label for="">Your Gender is :</label>
+            <input type="text" placeholder="TNG"><br>
+
+            <label for="">Your BG is :</label>
+            <input type="text" placeholder="B-"><br>
+
+            <label for="">Your Password is :</label>
+            <input type="password" placeholder="283874"><br>
+
+            <button type="submit" class="btn btn-primary buscancel">Update</button>
+            <button type="submit" class="btn btn-danger buscancel">Delete</button>
+            <a class="btn btn-danger buscancel mb-2" id="cancelUpdate">Cancel</a>
+        </form>
+    </div>
+
+    <script src=" index.js"></script>
 </body>
 
 </html>

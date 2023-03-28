@@ -135,9 +135,10 @@ footer span:hover{
     height: 520px;
 }
 .routeMap{
-    width:80%;
-    height: 400px;
-    background-color: aqua;
+    display: none;
+    width:50%;
+    height: 350px;
+    background-color:aquamarine;
     margin-left: auto;
     margin-right: auto;
     z-index: 1;
@@ -145,8 +146,45 @@ footer span:hover{
     cursor: pointer;
 }
 .routeMap:hover{
-    transition: 0.5s;
-    box-shadow: 2px -1px 19px 3px rgba(26,214,68,0.72);
-    -webkit-box-shadow: 2px -1px 19px 3px rgba(26,214,68,0.72);
-    -moz-box-shadow: 2px -1px 19px 3px rgba(26,214,68,0.72);
+    background-color:aqua;
+}
+.buscancel{
+    color: white !important;
+}
+.buscancel:hover{
+    background-color: white;
+    color: black !important;
+}
+.profile{
+    display: none;
+    width: 45%;
+    height: 220px;
+    background-color:aqua;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    margin-top: -30rem;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.profile:hover{
+    background-color: aquamarine;
+}
+.profile h5{
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.profileForm{
+    display: none;
+    width: 50%;
+    height: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aqua;
+    margin-top: -30rem;
+    cursor: pointer;
+    z-index: 1;
+    padding-left: 100px;
+    padding-top: 17px;
 }
