@@ -30,7 +30,7 @@ if (mapCancel) {
 
 let saveBus = document.getElementById('saveBus');
 if (saveBus) {
-    saveBus.addEventListener("click", () => {
+    saveBus.addEventListener("click", (e) => {
         let anonna1 = document.getElementById('anonna1');
         let anonna2 = document.getElementById('anonna2');
         let rojina1 = document.getElementById('rojina1');
@@ -48,12 +48,12 @@ if (saveBus) {
         if (boishaki1.value && boishaki2.value) {
             cnt++;
         }
-        console.log(cnt);
         if (cnt == 1) {
-            saveBus.submit();
             alert("Are you ready to lost 5TK..?");
+            saveBus.submit();
         }
         else {
+            e.preventDefault();
             alert("You have to be select an bus");
         }
     });
@@ -88,4 +88,52 @@ if (cancelUpdate) {
     cancelUpdate.addEventListener("click", () => {
         profileForm.style.display = "none";
     });
+}
+
+let deleteDone = document.getElementById('deleteDone');
+if (deleteDone) {
+    let name = document.getElementById('uname');
+    let email = document.getElementById('uemail');
+    let phone = document.getElementById('uphone');
+    let gender = document.getElementById('ugender');
+    let bg = document.getElementById('ubg');
+    let password = document.getElementById('upassword');
+    deleteDone.addEventListener("click", () => {
+        alert("Your account has been deleted");
+        name.value = " ";
+        email.value = "akkass@gmail.com";
+        phone.value = " ";
+        gender.value = " ";
+        bg.value = " ";
+        password.value = " ";
+        deleteDone.submit();
+    });
+}
+
+let add = document.getElementById('add');
+let addCancel = document.getElementById('addCancel');
+if (addCancel) {
+    addCancel.addEventListener("click", () => {
+        add.style.display = "none";
+    });
+}
+let addbtn = document.getElementById('addbtn');
+if (addbtn) {
+    addbtn.addEventListener("click", () => {
+        add.style.display = "block";
+    });
+}
+
+let updateCancel = document.getElementById('updateCancel');
+let update = document.getElementById('update');
+if (updateCancel) {
+    updateCancel.addEventListener("click", () => {
+        update.style.display = "none";
+    });
+}
+let updatebtn = document.getElementById('updatebtn');
+if (updatebtn) {
+    updatebtn.addEventListener("click", () => {
+        update.style.display = "block";
+    })
 }

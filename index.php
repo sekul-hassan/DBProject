@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +19,7 @@
         <div class="container">
             <div class="row">
                 <div class="homeDiv">
+                <h4 class="text-danger text-center"><?php if(isset($_SESSION['notMatch'])) echo $_SESSION['notMatch'];?></h4>
                     <div class="row">
                         <div class="col admin">
                             <h3>Admin Panel</h3>
@@ -29,12 +33,13 @@
                         </div>
                         <div class="col user">
                             <h3>User Panel</h3>
-                            <form class="" action="">
-                                <label for="">Enter Admin Name</label><br>
-                                <input class="" type="text" required placeholder="Enter name"><br><br>
+                            <form method="post" action="registration.php">
+                                <label for="">Enter User Name</label><br>
+                                <input class="" type="text" name="inputName" required placeholder="Enter name"><br><br>
                                 <label for="">Enter Password</label><br>
-                                <input class="" type="password" required placeholder="Enter password"><br><br>
-                                <button class="btn btn-primary" id="logIn">LogIn</button> OR
+                                <input class="" type="password" name="inputPassword" required
+                                    placeholder="Enter password"><br><br>
+                                <button class="btn btn-primary" id="logIn" name="logIn">LogIn</button> OR
                                 <a class="btn btn-primary" id="signUp">Sugin Up</a>
                             </form>
                         </div>
@@ -46,24 +51,24 @@
         <div class="container signUpForm" id="signUpForm">
             <div class="row">
                 <h3>please enter your information</h3>
-                <form class="" action="">
+                <form method="post" action="registration.php">
                     <label for="">Enter User Name</label><br>
-                    <input type="text" placeholder="Enter Name" required><br>
+                    <input name="username" type="text" placeholder="Enter Name" required><br>
                     <label for="">E-mail Address</label><br>
-                    <input type="email" placeholder="Enter E-mail" required><br>
+                    <input name="email" type="email" placeholder="Enter E-mail" required><br>
                     <label for="">Enter Your Phone Number</label><br>
-                    <input type="tel" placeholder="Enter phone number" required><br>
+                    <input name="phone" type="tel" placeholder="Enter phone number" required><br>
                     <label for="">Select Your Genger</label><br>
-                    <select name="gender" id="gender">
+                    <select name="gender" id="gender" required>
                         <option value="">Select Your gender</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select><br>
                     <label for="">Enter Your Blood Group</label><br>
-                    <input type="text" placeholder="Enter Blood Group"><br>
+                    <input name="bg" type="text" placeholder="Enter Blood Group" required><br>
                     <label for="">Enter your password</label><br>
-                    <input type="text" placeholder="Enter your password"><br>
-                    <button class="btn btn-success regiSubmit">Submit</button>
+                    <input name="password" type="password" placeholder="Enter your password" required><br>
+                    <button type="submit" name="saveuser" class="btn btn-success regiSubmit">Submit</button>
                     <a class="btn btn-outline-danger" id="regiCancel">Cancel</a>
                 </form>
             </div>

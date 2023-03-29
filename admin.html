@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>Home</title>
+</head>
+
+<body class="bodyImg">
+    <div class="overlay">
+        <div class="container">
+            <div class="row">
+                <div class="homeDiv text-center">
+                    <h3 class="text-center">Admin Panel</h3>
+                    <button class="btn btn-primary adminupdate" id="updatebtn">Update</button>
+                    <input type="text" placeholder="Enter id for update">
+                    <button class="btn btn-primary adminadd" id="addbtn">Add</button><br>
+                    <button class="btn btn-danger admindelete">Delete</button>
+                    <input type="text" placeholder="Enter id for delete">
+                    <a class="btn btn-danger admincancel" id="addbtn" href="index.php">Cancel</a><br>
+                </div>
+            </div>
+        </div>
+
+        <div class="add pl-5" id="add">
+            <h4 class="text-center">Employee add form</h4>
+            <form action="">
+                <label for="">Enter Employee id</label><br>
+                <input type="text" placeholder="Enter Employee id"><br>
+
+                <label for="">Enter Employee name</label><br>
+                <input type="text" placeholder="Enter Employee name"><br>
+
+                <label for="">Enter Employee salary</label><br>
+                <input type="text" placeholder="Enter Employee salary"><br>
+
+                <label for="">Enter Employee post</label><br>
+                <input type="text" placeholder="Enter Employee post"><br><br>
+                <select name="bus" id="bus">
+                    <option value="">Select a bus name</option>
+                    <option value="anonna">Anonna</option>
+                    <option value="rojina">Rojina</option>
+                    <option value="boishaki">Boishaki</option>
+                </select><br>
+                <button type="submit" class="btn btn-primary addDone" id="addDone">Submit</button>
+                <a class="btn btn-danger addDone" id="addCancel">Cancel</a>
+            </form>
+        </div>
+
+        <div class="add pl-5" id="update">
+            <h4 class="text-center">Employee update form</h4>
+            <form action="">
+                <label for="">Employee id is</label><br>
+                <input type="text" placeholder="xxxxxxxxxx"><br>
+
+                <label for="">Employee name is</label><br>
+                <input type="text" placeholder="xxxxxxxx"><br>
+
+                <label for="">Employee salary is</label><br>
+                <input type="text" placeholder="xxxxxxxxxxx"><br>
+
+                <label for="">Employee post is</label><br>
+                <input type="text" placeholder="xxxxxxxxxxx"><br><br>
+                <select name="bus" id="bus">
+                    <option value="">Select a bus name</option>
+                    <option value="anonna">Anonna</option>
+                    <option value="rojina">Rojina</option>
+                    <option value="boishaki">Boishaki</option>
+                </select><br>
+                <button type="submit" class="btn btn-primary addDone" id="updateDone">Submit</button>
+                <a class="btn btn-danger addDone" id="updateCancel">Cancel</a>
+            </form>
+        </div>
+        <script src="index.js"></script>
+</body>
+
+</html>
