@@ -19,16 +19,17 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="homeDiv">
+                <h4 class="text-danger text-center"><?php if(isset($_SESSION['adminNotFound'])) echo $_SESSION['adminNotFound'];?></h4>
                 <h4 class="text-danger text-center"><?php if(isset($_SESSION['notMatch'])) echo $_SESSION['notMatch'];?></h4>
                     <div class="row">
                         <div class="col admin">
                             <h3>Admin Panel</h3>
-                            <form class="" action="">
-                                <label for="">Enter Admin Name</label><br>
-                                <input class="" type="text" required placeholder="Enter name"><br><br>
-                                <label for="">Enter Password</label><br>
-                                <input class="" type="password" required placeholder="Enter password"><br><br>
-                                <button class="btn btn-primary" id="adminLogin">Submit</button>
+                            <form action="update.php" method="post">
+                                <label>Enter Admin Name</label><br>
+                                <input type="text" name="adminName" required placeholder="Enter name"><br><br>
+                                <label>Enter Password</label><br>
+                                <input type="password" name="adminPassword" required placeholder="Enter password"><br><br>
+                                <button class="btn btn-primary" id="adminLogin" name="adminLogin">Submit</button>
                             </form>
                         </div>
                         <div class="col user">

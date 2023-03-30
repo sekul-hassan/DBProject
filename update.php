@@ -27,4 +27,16 @@ if(isset($_POST['deleteDone'])){
     header('Location: logout.php');
 }
 
+
+if(isset($_POST['adminLogin'])){
+    $name = $_POST['adminName'];
+    $pass = $_POST['adminPassword'];
+    if($name=="sekul" && $pass=="sekul");
+    header('Location: admin.html');
+}
+else{
+    $_SESSION['adminNotFound'] = "Your name or password not match";
+    header('Location: index.php');
+}
+
 ?>
